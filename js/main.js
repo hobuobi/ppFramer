@@ -13,8 +13,7 @@ function handleImage(e){
         var frameImg = new Image();
         var padding = 20;
         frameImg.src = 'assets/IL_frameImg.png';
-        frameImg.crossOrigin="anonymous"
-        img.crossOrigin="anonymous"
+
         ctx.drawImage(frameImg, 0, 0);
         img.onload = function(){
             canvas.width = 1000;
@@ -25,13 +24,6 @@ function handleImage(e){
         img.src = event.target.result;
     }
     reader.readAsDataURL(e.target.files[0]);     
-
-    /*
-      imageObj.onload = function() {
-        ctx.drawImage(imageObj, 0, 0);
-      };
-      imageObj.src = 'assets/IL_frameImg.png';
-      */
 }
 
 function downloadCanvas(link, canvasId, filename) {
